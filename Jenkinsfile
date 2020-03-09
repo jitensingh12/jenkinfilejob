@@ -13,11 +13,12 @@ pipeline {
         stage('Test') {
 
            steps {
+            script {
+    
+                 if ( currentBuild.result == 'SUCCESS') {
 
-            sh 'echo "test stage'
-            if (${currentBuild.result} == 'SUCCESS') {
-
-             sh 'echo "Test successed"'
+		             sh 'echo "Test successed"'
+		}
             }
             
 	}
