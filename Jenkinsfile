@@ -15,7 +15,7 @@ pipeline {
            steps {
 
             sh 'echo "test stage'
-            if (currentBuild.result = 'SUCCESS') {
+            if (currentBuild.result == 'SUCCESS') {
 
              sh 'echo "Test successed"'
             }
